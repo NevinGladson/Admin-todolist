@@ -1,0 +1,196 @@
+.navbar {
+    position: relative; /* Needed to enable z-index */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #10b41d;
+    color: white;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 2 !important; /* Higher than sidebar */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1); /* Adds shadow for depth */
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-left a,
+  .navbar-right a,
+  .navbar-right button {
+    color: white;
+    text-decoration: none !important;
+    font-size: larger;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .Signup {
+    margin-right: 30px;
+  }
+
+  .Logout {
+    margin-right: 15px;
+  }
+
+      
+      
+    
+     
+
+    .sidebar {
+      width: 80px;  /* Width of the sidebar */
+      margin-top: 40px;
+      height: 100vh; /* Full height of the viewport */
+      position: fixed; /* Fixed position to stay in place during scrolling */
+      left: 0; /* Align to the left side */
+      top: 0; /* Align to the top */
+      background-color: #333; /* Dark background for the sidebar */
+      padding: 20px; /* Padding inside the sidebar */
+      box-sizing: border-box; /* Includes padding and border in the width */
+      z-index: 1 !important; /* Lower than navbar */
+  }
+
+  .image-center {
+    border-radius: 50%; /* Circle shape */
+    margin-left: 100px;
+    margin-top: 350px;
+    cursor: pointer;
+    height: 100px;
+    width: 100px; /* Medium size for center display */
+    transition: all 0.3s ease; /* Smooth transition */
+    border: 5px solid black; /* Adjust thickness and color as needed */
+  
+  }
+  
+  .image-sidebar {
+    border-radius: 50%; /* Circle shape */
+    cursor: pointer;
+    margin-top: 40px;
+    margin-left: -5px;
+    height: 40px;
+    width: 44px;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items vertically within the container */
+    justify-content: center; /* Center items horizontally within the container */
+    gap: 10px; /* Optional: Adds space between the image and the label */
+}
+/* Assuming the parent container where ImageComponent is used */
+.parent-container {
+  display: flex;
+  justify-content: center; /* Aligns children (ImageComponent instances) horizontally in the center */
+  align-items: center; /* Aligns children vertically in the middle */
+  gap: 250px;
+}
+.image-label {
+  font-size: 0.875rem; /* Adjust label font size as needed */
+  text-align: center; /* Ensure labels are centered under images */
+  margin-left: 100px !important; /* Adjust as necessary to move text to the right */
+}
+
+.user-card:hover {
+  background-color: #f5f5f5; /* Light grey background on hover */
+  transform: scale(1.02); /* Slight increase in size */
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+
+
+
+
+
+.log-text {
+  font-family: 'Courier New', Courier, monospace; /* Ensures monospace even if global styles are overridden */
+  white-space: pre; /* Maintains spacing and new lines */
+}
+
+
+
+.selected-image {
+  border: 3px solid #4CAF50; /* Green border for selected image */
+  box-shadow: 0 0 10px #4CAF50; /* Soft shadow to highlight */
+}
+
+.image-sidebar, .image-center {
+  transition: all 0.3s ease; /* Ensures smooth transition for all changes */
+}
+
+.image-sidebar:hover, .image-center:hover {
+  transform: scale(1.1); /* Slight scale on hover for better interaction feedback */
+}
+
+.scrollable-content {
+  max-height: 5000px;  
+  overflow-y: auto;         
+}
+
+.session-info {
+  max-height: 5000px; /* Maximum height for the session info area */
+  overflow-y: auto; /* Enable vertical scrolling when content exceeds the max height */
+  margin-top: 10px; /* Space between the creation date and session info */
+}
+
+.card-content-inner {
+  padding: 16px; /* Padding inside the card content */
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Consistent with card border radius */
+}
+
+/* .user-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 200px; 
+  background-color: rgb(255, 255, 255); 
+  margin: 20px 325px; 
+  max-width: 850px; 
+  width: 100%; 
+  height: 800px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+} */
+.user-list-container {
+background-color: #fff; 
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+justify-content: center;
+max-width: 850px; 
+width: 100%; 
+}
+.log-heading {
+font-size: 2.2rem !important;
+color: #333;
+text-align: center;
+margin-bottom: 20px;
+}
+.log-card {
+margin-top: 45px;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+font-size: 0.875rem; /* Smaller font size for log-like appearance */
+color: #333;
+}
+
+.user-card {
+  min-width: 300px; /* Minimum width for each card */
+  margin: 10px; /* Space between cards */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow for depth */
+  border-radius: 8px; /* Rounded corners for the card */
+}

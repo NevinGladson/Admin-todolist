@@ -1,0 +1,16 @@
+const ImageComponent = ({ src, alt, viewType }) => (
+  <img
+    src={src}
+    alt={alt}
+    className={imageInSidebar ? 'image-sidebar' : 'image-center'}
+    onClick={() => handleImageClick(viewType)}
+  />
+);
+
+<img 
+            src={src}
+            alt={alt}
+            className={imageInSidebar ? 'image-sidebar' : 'image-center'} 
+            onClick={() => handleImageClick(viewType)}
+        />
+        <Typography variant="subtitle1" className="image-label">{label}</Typography> {/* Caption for the image */}
